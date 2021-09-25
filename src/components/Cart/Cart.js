@@ -2,20 +2,28 @@ import React from 'react';
 import './Cart.css'
 const Cart = (props) => {
     const { cart } = props;
-    /* const total = 0;
-    for(const product of cart){
-        total = total + product.price
-    } */
-    // const total = cart.reduce((previous, current) => previous + current.price, 0);
-    const totalReducer = (previous, current) => previous + current.price;
-    const total = cart.reduce(totalReducer, 0)
-    const shipping = 20
+    console.log(cart);
+    let total = 0;
+    let totalQuantity = 0
+    for (const product of cart) {
+        if (!product.quantity) {
+            product.quantity = 1
+        }
+        total = total + product.price * product.quantity
+        totalQuantity = totalQuantity + product.quantity;
+    }
+    /* const totalReducer = (previous, current) => previous + current.price;
+    const total = cart.reduce(totalReducer, 0) */
+    /* 
+    const total = cart.reduce((previous, current) => previous + (current.price * current.quantity), 0);
+    const totalQuantity = cart.reduce((previous, current) => previous + current.quantity, 0) */
+    const shipping = total > 0 ? 15 : 0
     const tax = (total + shipping) * 10 / 100;
     const grandTotal = total + shipping + tax;
     return (
         <div className="cart">
             <h2>Order Summary</h2>
-            <h4>Items orderded: {cart.length} </h4>
+            <h4>Items orderded: {totalQuantity} </h4>
             <table className='table'>
                 <tbody>
                     <tr>
