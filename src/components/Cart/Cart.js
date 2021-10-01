@@ -44,7 +44,7 @@ const Cart = (props) => {
                     </tr>
                 </tbody>
             </table>
-            <button className="btn">Place Your order</button>
+            {props.children}
         </div>
     );
 };
