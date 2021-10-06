@@ -33,3 +33,23 @@
 .icon{
     color: goldenrod;
 }
+
+
+/* responsive */
+@media screen and (max-width:640px) {
+    .product{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .product-img img{
+        width: 150px;
+        height: 100px;
+    }
+    .product-details{
+        padding-left: 5px;
+    }
+    .product-details h3{
+        font-size: 16px;
+    }
+}

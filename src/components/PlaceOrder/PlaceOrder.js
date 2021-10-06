@@ -5,7 +5,7 @@ const PlaceOrder = () => {
     return (
         <div style={{ textAlign: 'center' }}>
             <h2>Thanks for your order.</h2>
-            <p>We will deliver your product asap.</p>
+            <p style={{ fontWeight: 'bold' }}>We will deliver your product asap.</p>
             <img src={img} alt="" />
         </div>
     );

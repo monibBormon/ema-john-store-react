@@ -12,3 +12,11 @@
     min-height:35px;
     padding-left: 10px;
 }
+
+
+/* responsive */
+@media screen and (max-width:640px) {
+    .shop-container{
+        padding: 15px;
+    }
+}
