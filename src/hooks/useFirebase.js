@@ -7,7 +7,7 @@ initializeAuthentication()
 
 const useFirebase = () => {
     const [user, setUser] = useState({})
-    const [error, setError] = useState('')
+    // const [error, setError] = useState('')
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -40,7 +40,6 @@ const useFirebase = () => {
     // multiple items hole return a {} bracket use korte hobe
     return {
         user,
-        error,
         googleSignIn,
         logOut
     }

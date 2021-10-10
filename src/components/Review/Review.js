@@ -1,7 +1,7 @@
 import React from 'react';
 import useCart from '../../hooks/useCart';
 import useProduct from '../../hooks/useProduct';
-import { clearTheCart, removeFromDb } from '../../utilities/fakedb';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { useHistory } from 'react-router-dom';
@@ -22,6 +22,7 @@ const Review = () => {
         //clear the cart from localstorage
         /* setCart([])
         clearTheCart(); */
+        // have to import clearTheCart
     }
 
     return (
