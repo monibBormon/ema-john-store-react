@@ -36,7 +36,7 @@ const useFirebase = () => {
                 setUser(user)
             }
         })
-    }, [])
+    })
     // multiple items hole return a {} bracket use korte hobe
     return {
         user,
