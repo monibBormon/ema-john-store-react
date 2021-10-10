@@ -1,6 +1,7 @@
 .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 30px;
     align-items: center;
     border-bottom: 1px solid chocolate;
@@ -15,6 +16,7 @@
     padding: 10px 20px;
     transition: .3s;
     border-radius: 5px;
+    margin-right: 5px;
 }
 .selected{
     background-color: chocolate;
@@ -23,6 +25,9 @@
 .nav a:hover{
     background-color: chocolate;
     color: #fff;
+}
+.logOut{
+    margin-top: 0px;
 }
 
 /* responsive  */
@@ -39,7 +44,10 @@
         margin: 10px 0;
     }
     .nav a{
-        font-size: 16px;
+        font-size: 15px;
         margin-right: 5px;
+    }
+    .logOut{
+        margin-top: 15px;
     }
 }
