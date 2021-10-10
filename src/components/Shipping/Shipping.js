@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import useCart from '../../hooks/useCart';
 import useProduct from '../../hooks/useProduct';
@@ -15,7 +14,7 @@ const Shipping = () => {
 
     //clear the cart
     const [products] = useProduct()
-    const [cart, setCart] = useCart(products)
+    const [setCart] = useCart(products)
     const history = useHistory()
     const handleConfirm = () => {
         setCart([])
